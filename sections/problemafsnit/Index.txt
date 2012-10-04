@@ -1,0 +1,7 @@
+1.1 = encoderIndledning
+1.2 = encoderTeknologi
+1.3 = ProbInitierende
+2.1 = ProbProdukt
+2.2 = ProbData
+2.3 = ProbVurdering
+3   = ProbVurdering

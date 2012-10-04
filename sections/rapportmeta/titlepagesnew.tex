@@ -1,0 +1,80 @@
+\def\navnA{NAVN}
+\def\navnB{NAVN}
+\def\navnC{NAVN}
+\def\navnD{NAVN}
+\def\navnE{NAVN}
+
+\ifx\titlepageleftcolumnwidth\undefined
+\newlength{\titlepageleftcolumnwidth}
+\newlength{\titlepagerightcolumnwidth}
+\fi
+\setlength{\titlepageleftcolumnwidth}{0.5\textwidth-\tabcolsep}
+\setlength{\titlepagerightcolumnwidth}{\textwidth-2\tabcolsep-\titlepageleftcolumnwidth}
+% create title page
+\thispagestyle{empty}
+\noindent%
+\begin{tabular}{@{}ll@{}}
+  \parbox{\titlepageleftcolumnwidth}{
+    \iflanguage{danish}{%
+      \includegraphics[width=\titlepageleftcolumnwidth]{images/aau_logo_da}
+    }{%
+      \includegraphics[width=\titlepageleftcolumnwidth]{images/aau_logo_en}
+    }
+  } &
+  \parbox{\titlepagerightcolumnwidth}{\raggedleft\sffamily\small
+    % department and address
+    % \textbf{Institut for Elektroniske Systemer}\\
+    % Fredrik Bajers Vej 7\\
+    % DK-9220 Aalborg Ø\\
+    % \href{http://es.aau.dk}{http://es.aau.dk}
+    \textbf{3. Semester ved Det Teknisk-Naturvidenskabelige og Det Sundhedsvidenskabelige Fakultet}\\
+    Strandvejen 12--14\\
+    DK-9000 Aalborg\\
+    \href{http://tnb.aau.dk}{http://tnb.aau.dk}
+  }\medskip\\
+  \parbox[t]{\titlepageleftcolumnwidth}{
+    \textbf{Titel:}\\ Trådløs Enkoder\medskip\par
+    \textbf{Tema:}\\ Computer Engineering\medskip\par
+    \textbf{Projektperiode:}\\ Efterårssemestret 2012\medskip\par
+    \textbf{Projektgruppe:}\\ 351\medskip\par
+    \textbf{Deltager(e):}\\ 
+    \navnA\\ 
+    \navnB\\
+    \navnC\\
+    \navnD\\
+    \navnE\\
+    \navnF\\
+    \navnG\medskip\par
+    \textbf{Vejledere:}\\ VEJLEDER \\ BIVEJLEDER \medskip\par
+    \textbf{Oplagstal:} 1\medskip\par
+    \textbf{Sidetal:} \pageref{LastPage}\medskip\par
+    \textbf{Afleveringsdato:}\\ 19. december 2012
+  } &
+  \parbox[t]{\titlepagerightcolumnwidth}{%
+    \textbf{Synopsis:}\medskip\par
+    \fbox{\parbox{\titlepagerightcolumnwidth-2\fboxsep-2\fboxrule}{%
+        \input{sections/rapportmeta/synopsis}
+      }}
+  }\\
+\end{tabular}\\
+
+\parbox{\linewidth}{
+  \vspace{0.8cm}
+  \centering
+  \foreach \i in {\navnA,\navnB,\navnC,\navnD,\navnE,\navnF,\navnG}{
+    \parbox[t][1.8cm]{4.2cm}{
+      \centering
+      \hrulefill\\
+      \i
+    }\hfill
+  }
+}
+\vfill
+\noindent{\footnotesize\emph{The content of this report is freely available, but publication (with reference)
+    may only be pursued due to agreement with the author.}}
+
+\clearpage
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../../master"
+%%% End: 

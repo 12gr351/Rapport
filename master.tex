@@ -1,0 +1,149 @@
+% Test-kommentar
+\input{setup/preamble.tex}
+\input{setup/hyphenations.tex} 
+\input{setup/macros.tex}
+
+\begin{document}
+\input{sections/rapportmeta/frontpage}
+\input{sections/rapportmeta/titlepagesnew}
+\frontmatter
+\input{sections/rapportmeta/forord}
+\newpage
+\tableofcontents
+\mainmatter
+
+\input{sections/indledning/indledning}
+\input{sections/indledning/initierendeProblem}
+\input{sections/indledning/metodeafsnit}
+
+
+\chapter{Problemanalyse}
+\label{cha:problemanalyse}
+
+% Problemformulering
+\input{sections/problemformulering/problemformulering}
+
+% Kravspecifikation
+\chapter{Kravspecifikation}
+\label{cha:kravspecifikation}
+\begin{indledning}
+
+\end{indledning}
+
+% Generel beskrivelse
+\section{Generel beskrivelse}
+\input{sections/kravspecifikation/generelbeskrivelse}
+
+% Systemanalyse
+
+% Funktionsbeskrivelser
+
+
+% Brugerprofil
+\input{sections/kravspecifikation/brugerprofil}
+
+% Antagelser og Afhængigheder
+
+
+\section{Specifikke krav}
+\label{sec:speckrav}
+
+% Eksterne Grænseflader
+
+% Funktionelle krav
+
+
+% Ydelses krav
+
+
+% Design krav
+
+
+% Software krav
+%\input{sections/kravspecifikation/softwareKrav}
+
+\section{Andre Krav}
+\label{sec:andre-krav}
+
+% Lovgivnings krav
+
+
+% Miljø krav
+
+
+% Økonomiske krav
+
+
+% Problemafgrænsning
+
+
+\begin{tail}
+TAIL
+\end{tail}
+
+\chapter{Testspecifikation}
+\label{cha:testspecifikation}
+\begin{indledning}
+INDLEDNING
+\end{indledning}
+
+\begin{tail}
+TAIL
+\end{tail}
+
+
+\chapter{Prototype}
+\label{cha:prototype}
+\begin{indledning}
+INDLEDNING
+\end{indledning}
+
+
+\begin{tail}
+  TAIL
+\end{tail}
+
+\chapter{Implementering}
+\label{cha:implementering}
+
+\begin{indledning}
+  INDLEDNING
+\end{indledning}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{images/produkt}
+  \caption{PRODUKT}
+  \label{fig:produkt}
+\end{figure}
+
+
+\chapter{Accepttest}
+\label{cha:accepttest}
+\input{sections/test/accepttest}
+
+\chapter{Konklusion}
+\label{cha:konklusion}
+\input{sections/opsamling/konklusion}
+
+
+\chapter{Perspektivering}
+\label{cha:perspektivering}
+\input{sections/opsamling/perspektivering}
+
+\appendix
+
+%\listoffixmes
+
+% \nocite{*}
+% \bibliographystyle{plain}
+\bibliographystyle{dk-plain}
+\bibliography{bib/kilder}
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

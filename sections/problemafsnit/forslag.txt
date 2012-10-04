@@ -1,0 +1,21 @@
+﻿1. Indledning
+	1.1 Encoders
+		- kort og overskuelig forklaring af hvad de gør, hvad de bruges til og hvordan de fungerer, evt i sammenspil med virksomheder/fabrikker og hvad teknologien betyder for disse.
+	1.2 Eksisterende teknologi.
+		- fordele/ulemper ved den nuværende teknologi.
+	1.3 Initierende problem
+		- vælge én af ulemperne fra 1.2 og stille det op som det initierende problem (vi har jo allerede valgt det, så dette er bare en formalia)
+2. Problemanalyse
+	2.1 Produkt analyse
+		- hvordan anvendes den nuværende teknologi; omkostninger, vedligeholdelse, nødvendighed, etc.
+		- HVORDAN kan det gøres bedre? (desto flere løsninger, desto bedre, selvom vi ikke bruger ideerne, så er det godt at skrive dem ned alligevel, så vi kan dokumentere at vi har tænkt over det).
+	2.2 Data analyse
+		- økonomisk betydning for nuværende teknologi (regnskab evt).
+		- besparelser ved at løse "problemet"
+		- 
+	2.3 Vurdering
+		- fordele/ulemper ved de forskellige løsninger (vi prøver her at indsnævre forslagene til dem der er brugbare og realistiske mht. tilgængelige resurser).
+		- hvilke resurser har vi til rådighed og hvilke resurser er bedst egnet (enkodere, trådløs teknologi, batteri, dynamo, osv).
+		- hvordan kan vi videreudvikle nuværende produkter?
+3. Problemformulering
+		- opstil et specificeret problem (detaljeret) og hvordan vi har tænkt os at løse det.

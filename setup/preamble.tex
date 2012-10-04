@@ -1,0 +1,205 @@
+\documentclass[openany,12pt,a4page]{memoir}
+%
+% Packages
+%
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+
+
+% \usepackage{fouriernc}               % 
+% \usepackage{fourier}                 % 
+% \usepackage{lmodern}                 % Latin modern
+\usepackage{cmbright}                % Computer modern bright
+% \usepackage{gfsartemisia-euler}      % GFS Artemisia with Euler math
+% \usepackage{mathdesign}              % Math design
+% \usepackage{tgschola}                % 
+% \usepackage{times}                   % Times
+% \usepackage{kpfonts}                 % KP Serif
+% \usepackage{DejaVuSerif}             % Deja Vu Serif
+% \usepackage[sc]{mathpazo}            % Palatino
+% \linespread{1.05}
+
+\usepackage{courier}
+\usepackage{icomma}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{xcolor}
+\usepackage{pdfpages}
+\usepackage{eurosym}
+\usepackage{bbding}
+\usepackage{longtable}
+
+%\usepackage{wrapfig}
+\usepackage{subfig}
+\usepackage[per-mode=fraction,unit-color = black]{siunitx}
+\sisetup{output-decimal-marker = {,}}
+\usepackage[section]{placeins}
+%\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usetikzlibrary{shapes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\pgfplotsset{
+  every linear axis/.append style={
+    legend pos=outer north east,
+    % axis x line=middle, 
+    % axis y line=middle,
+  },
+  every semilogy axis/.append style={
+    legend pos=outer north east,
+    % axis x line=middle, 
+    % axis y line=middle,
+  },
+  every semilogx axis/.append style={
+    legend pos=outer north east,
+    % axis x line=middle, 
+    % axis y line=middle,
+  },
+  every loglog axis/.append style={
+    legend pos=outer north east,
+    % axis x line=middle, 
+    % axis y line=middle,
+  },
+  every axis plot/.append style = {
+    thick,
+  },
+}
+\usepackage{listings}
+\lstset{
+  breaklines=true, 
+  language=C++, 
+  basicstyle=\footnotesize\ttfamily, 
+  frame=single,
+  columns=flexible, 
+  numbers=left, 
+  numberstyle=\sffamily, 
+  literate={ø}{{\o}}1 {æ}{{\ae}}1{å}{{\aa}}1,
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false
+  }
+\usepackage{hyperref}
+\hypersetup{%
+  pdfpagelabels=true,%
+  plainpages=false,%
+  pdfauthor={Author(s)},%
+  pdftitle={Title},%
+  pdfsubject={Subject},%
+  bookmarksnumbered=true,%
+  colorlinks,%
+  citecolor=black,%
+  filecolor=black,%
+  linkcolor=black,%
+  urlcolor=black,%
+  pdfstartview=FitH%
+}
+\usepackage{memhfixc}
+\usepackage{url}
+\urlstyle{sf}
+% \usepackage[hyphenbreaks]{breakurl}
+%
+% Fra AAU temp
+%
+\usepackage{calc}
+\usepackage{lastpage}
+%
+% Layout
+%
+\usepackage{aurical}
+\newenvironment{indledning}{\itshape}{\vskip 0.75cm}
+\newenvironment{tail}{\vskip 0.75cm\itshape}{}
+\newcommand{\spc}[1] {#1 \vskip 1cm}
+
+% Fixme
+\usepackage[footnote,draft,danish,silent,nomargin]{fixme}
+
+\definecolor{aaucolor}{HTML}{D45500}
+\definecolor{aaugray}{HTML}{6c6753}
+
+% Itemize -- squeeze space
+\let\tempone\itemize
+\let\temptwo\enditemize
+\renewenvironment{itemize}{\tempone\firmlist}{\temptwo}
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemiii}{$\diamond$}
+\renewcommand{\labelitemiv}{$\ast$}
+
+
+% Enumerate -- squeeze space
+\let\tempthree\enumerate
+\let\tempfour\endenumerate
+\renewenvironment{enumerate}{\tempthree\firmlist}{\tempfour}
+
+% Figures -- improve placement
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.85}
+
+% Bib -- squeeze space
+% \usepackage{bibspacing}
+
+% Afsnit setup
+\setlength{\parindent}{10pt}
+\setlength{\parskip}{2pt}
+
+% Margins
+\setlrmarginsandblock{1.7cm}{1.7cm}{*}
+\setulmarginsandblock{2.5cm}{2.5cm}{*}
+\checkandfixthelayout
+\setlength{\evensidemargin}{\oddsidemargin}
+
+% \chapterstyle{hangnum}
+% \chapterstyle{bianchi}
+\makechapterstyle{combined}{
+  \setlength{\beforechapskip}{0pt}
+  \setlength{\midchapskip}{-60pt}
+  \setlength{\afterchapskip}{2.5cm}
+  \renewcommand*{\printchaptername}{}
+  \renewcommand*{\chapnumfont}{\normalfont\usefont{T1}{qag}{}{n}\selectfont\fontsize{80}{0}\selectfont}
+  \renewcommand*{\printchapternum}{\flushright\chapnumfont\textcolor[rgb]{.64,.79,.87}{\thechapter}}
+  \renewcommand*{\chaptitlefont}{\normalfont\usefont{T1}{qag}{}{n}\selectfont\Huge\bfseries}
+  \renewcommand*{\printchaptertitle}[1]{%
+    \raggedright\chaptitlefont\parbox[t]{\textwidth-3cm}{\raggedright##1}}
+}
+
+
+\chapterstyle{combined}
+
+% Antal overskrifter med nummer
+\setsecnumdepth{subsection}
+% \setsubsechook{\hangsecnum}
+\setsecheadstyle{\LARGE\usefont{T1}{qag}{}{n}\selectfont}
+\setsubsecheadstyle{\Large\usefont{T1}{qag}{}{n}\selectfont}
+\setsubsubsecheadstyle{\large\usefont{T1}{qag}{b}{n}\selectfont}
+\setparaheadstyle{\normalsize\usefont{T1}{qag}{}{n}\selectfont}
+
+
+\checkandfixthelayout
+
+\setlength{\unitlength}{2em} % for the picture environment
+\setcounter{tocdepth}{2}
+
+\usetikzlibrary{shapes,patterns}
+% Actor: \actor{<x placering>}{<y placering>}{<label>}{<Navn>}
+\newcommand{\actor}[4] {
+  \begin{scope}[xshift=#1cm,yshift=#2cm,scale=0.15,yshift=2cm]
+  \draw (0,0) circle (1cm) ++(down:1) -- (down:5) coordinate (skridt);
+  \draw (skridt) -- ++(-70:3);
+  \draw (skridt) -- ++(-110:3);
+  \coordinate (bryst) at (0,-2);
+  \coordinate (#3) at (0,-2);
+  \draw (bryst) -- ++(left:2);
+  \draw (bryst) -- ++(right:2);
+  \node at (0,-10) {#4};
+  \end{scope}
+}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../master"
+%%% End: 
